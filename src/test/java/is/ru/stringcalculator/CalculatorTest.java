@@ -28,6 +28,7 @@ public class CalculatorTest {
     	public void testMultipleNumbers(){
     		assertEquals(6, Calculator.add("1,2,3"));
     	}
+
     	@Test
 	public void testUnknownNumbers() {		
 		int numCount = 4+(int)(Math.random()*(20-4));
@@ -39,6 +40,11 @@ public class CalculatorTest {
 			randStr += randNum + ",";
 		}
 		assertEquals(sum, Calculator.add(randStr));
+	}
+
+	@Test
+	public void testNewLine() {
+		assertEquals(6, Calculator.add("1\n2,3"));
 	}
 
 }
