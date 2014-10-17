@@ -25,8 +25,20 @@ public class CalculatorTest {
 	}	
 
 	@Test
-    public void testMultipleNumbers(){
-    	assertEquals(6, Calculator.add("1,2,3"));
-    }
+    	public void testMultipleNumbers(){
+    		assertEquals(6, Calculator.add("1,2,3"));
+    	}
+    	@Test
+	public void testUnknownNumbers() {		
+		int numCount = 4+(int)(Math.random()*(20-4));
+		int sum = 0;
+		String randStr = "";
+		for (int i = 0; i < numCount; i++) {
+			int randNum = 1+(int)(Math.random()*(10-1));
+			sum += randNum;
+			randStr += randNum + ",";
+		}
+		assertEquals(sum, Calculator.add(randStr));
+	}
 
 }
