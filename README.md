@@ -24,7 +24,7 @@ Try not to read ahead – do one task at a time. Work incrementally.
    e. Remember to solve things as simply as possible, forcing yourself to write tests for things you didn’t think about. 
    f. Remember to refactor after each passing test. 
 2. (DONE) Allow the Add method to handle an unknown number of arguments/numbers. 
-3. Allow the Add method to handle new lines between numbers (instead of commas). 
+3. (DONE) Allow the Add method to handle new lines between numbers (instead of commas). 
    a. Example: `“1\n2,3”` should return 6. 
    b. Example: `“1,\n”` is invalid, but you don’t need a test for this case. 
    c. Only test correct inputs – there is no need to deal with invalid inputs for this kata. 
