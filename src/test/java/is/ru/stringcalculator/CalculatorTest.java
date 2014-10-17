@@ -51,5 +51,9 @@ public class CalculatorTest {
 	public void testDelimiter() {
 		assertEquals(3, Calculator.add("//;\n1;2"));
 	}
-
+	
+	@Test
+	public void testNegative() {
+		assertEquals("Negatives not allowed: -4,-5", Calculator.add("2,-4,3,-5"));
+	}
 }
