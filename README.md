@@ -28,7 +28,7 @@ Try not to read ahead – do one task at a time. Work incrementally.
    a. Example: `“1\n2,3”` should return 6. 
    b. Example: `“1,\n”` is invalid, but you don’t need a test for this case. 
    c. Only test correct inputs – there is no need to deal with invalid inputs for this kata. 
-4. Allow the Add method to handle a different delimiter: 
+4. (DONE) Allow the Add method to handle a different delimiter: 
    a. To change the delimiter, the beginning of the string will contain a separate line that looks like this: `“//[delimiter]\n[numbers]”` 
    b. Example: `“//;\n1;2”` should return 3 (the delimiter is ;) 
    c. This first line is optional; all existing scenarios (using , or \n) should work as before. 
