@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd ~/stringcalculator
 ./bin/clean
 ./bin/compile
 ./bin/compile_tests
