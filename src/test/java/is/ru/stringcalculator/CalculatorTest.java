@@ -51,9 +51,14 @@ public class CalculatorTest {
 	public void testDelimiter() {
 		assertEquals(3, Calculator.add("//;\n1;2"));
 	}
-	
+
+	@Rule
+	public ExpectedException thrown = ExpectedException.none();	
 	@Test
 	public void testNegative() {
-		assertEquals("Negatives not allowed: -4,-5", Calculator.add("2,-4,3,-5"));
+		thrown.expect( IllegalArgumentException.class );
+		thrown.expectMessage("Negatives not allowed: -4,-5");
+		Calculator.add("2,-4,3,-5");
+		
 	}
 }

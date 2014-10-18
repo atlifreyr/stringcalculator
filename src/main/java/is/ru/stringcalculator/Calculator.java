@@ -9,6 +9,9 @@ public class Calculator {
 		else if(text.contains("//")){
 			return sum(splitDelimiter(text, getDel(text)));
 		}
+		else if(text.contains("-")){
+			return -1; 
+		}
 		else if(text.contains(",") || text.contains("\n")){
 			return sum(splitNumbers(text));
 		}
