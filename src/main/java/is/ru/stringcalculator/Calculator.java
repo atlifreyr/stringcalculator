@@ -48,7 +48,7 @@ public class Calculator {
 	private static int sum(String[] numbers){
 		int total = 0;
         	for(String number : numbers){
-			total += toInt(number);
+			if(Integer.parseInt(number) <= 1000) total += toInt(number);
 		}
 		return total;
 	}
