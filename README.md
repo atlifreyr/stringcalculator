@@ -32,7 +32,7 @@ Try not to read ahead – do one task at a time. Work incrementally.
    a. To change the delimiter, the beginning of the string will contain a separate line that looks like this: `“//[delimiter]\n[numbers]”` 
    b. Example: `“//;\n1;2”` should return 3 (the delimiter is ;) 
    c. This first line is optional; all existing scenarios (using , or \n) should work as before. 
-5. Calling Add with a negative number will throw an exception “Negatives not allowed: “ listing all negative numbers that were in the list of numbers. 
+5. (DONE) Calling Add with a negative number will throw an exception “Negatives not allowed: “ listing all negative numbers that were in the list of numbers. 
    a. Example `“-1,2”` throws “Negatives not allowed: -1” 
    b. Example `“2,-4,3,-5”` throws “Negatives not allowed: -4,-5” 
 6. Numbers bigger than 1000 should be ignored. 
