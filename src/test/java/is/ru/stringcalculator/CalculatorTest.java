@@ -65,4 +65,9 @@ public class CalculatorTest {
 		Calculator.add("2,-4,3,-5");
 		
 	}
+
+	@Test
+	public void testOver1k() {
+		assertEquals(2, Calculator.add("1001,2"));
+	}
 }
