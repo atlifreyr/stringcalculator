@@ -11,13 +11,7 @@ public class Calculator {
 		}
 		else if(text.contains("-")){
 			String ex = "Negatives not allowed: ";
-			int index = text.indexOf( '-', 0 );
-			while(index != -1){
-				String neg = text.substring(index,index+2);
-				ex += neg + ",";
-				index = text.indexOf( '-', index+1 );
-			}
-			ex = ex.substring(0, ex.length()-1);
+			ex += getNegatives(text);
 			throw new IllegalArgumentException(ex);
 
 		}
@@ -28,6 +22,17 @@ public class Calculator {
 			return 1;
 	}
 
+	private static String getNegatives(String numbers){
+		String neg = "";
+		int index = numbers.indexOf( '-', 0 );
+		while(index != -1){
+			String num = numbers.substring(index,index+2);
+			neg += num + ",";
+			index = numbers.indexOf( '-', index+1 );
+		}
+		neg = neg.substring(0, neg.length()-1);
+		return neg;
+	}
 	private static String getDel(String numbers){
 		return Character.toString(numbers.charAt(2));
 	}

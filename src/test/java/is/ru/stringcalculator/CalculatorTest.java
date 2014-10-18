@@ -24,6 +24,7 @@ public class CalculatorTest {
 	@Test
 	public void testTwoNumbers() {
 		assertEquals(3, Calculator.add("1,2"));
+		assertEquals(0, Calculator.add("0,0"));
 	}	
 
 	@Test
@@ -47,6 +48,7 @@ public class CalculatorTest {
 	@Test
 	public void testNewLine() {
 		assertEquals(6, Calculator.add("1\n2,3"));
+		assertEquals(6, Calculator.add("1,2\n3"));
 	}
 
 	@Test
@@ -57,7 +59,7 @@ public class CalculatorTest {
 	@Rule
 	public ExpectedException thrown = ExpectedException.none();	
 	@Test
-	public void testNegative() {
+	public void testNegatives() {
 		thrown.expect( IllegalArgumentException.class );
 		thrown.expectMessage("Negatives not allowed: -4,-5");
 		Calculator.add("2,-4,3,-5");
