@@ -35,7 +35,7 @@ Try not to read ahead – do one task at a time. Work incrementally.
 5. (DONE) Calling Add with a negative number will throw an exception “Negatives not allowed: “ listing all negative numbers that were in the list of numbers. 
    a. Example `“-1,2”` throws “Negatives not allowed: -1” 
    b. Example `“2,-4,3,-5”` throws “Negatives not allowed: -4,-5” 
-6. Numbers bigger than 1000 should be ignored. 
+6. (DONE) Numbers bigger than 1000 should be ignored. 
    a. Example: `“1001,2”` returns 2 
 7. Delimiters can be of any length, using this syntax: `“//[***]\n1***2***3”` returns 6. 
 8. Allow multiple delimiters, using this syntax: `“//[*][%]\n1*2%3”` returns 6. 
