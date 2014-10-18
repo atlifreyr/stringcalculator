@@ -10,7 +10,16 @@ public class Calculator {
 			return sum(splitDelimiter(text, getDel(text)));
 		}
 		else if(text.contains("-")){
-			return -1; 
+			String ex = "Negatives not allowed: ";
+			int index = text.indexOf( '-', 0 );
+			while(index != -1){
+				String neg = text.substring(index,index+2);
+				ex += neg + ",";
+				index = text.indexOf( '-', index+1 );
+			}
+			ex = ex.substring(0, ex.length()-1);
+			throw new IllegalArgumentException(ex);
+
 		}
 		else if(text.contains(",") || text.contains("\n")){
 			return sum(splitNumbers(text));
@@ -38,7 +47,4 @@ public class Calculator {
 		}
 		return total;
 	}
-
-
-
 }
